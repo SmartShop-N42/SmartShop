@@ -195,8 +195,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="col-md-3 product-men yes-marg">
                 <div class="men-pro-item simpleCart_shelfItem">
                     <div class="men-thumb-item">
-                        <img src="../../"+${d.img}  alt="" class="pro-image-front">
-                        <img src="../../"+${d.img}  alt="" class="pro-image-back">
+                        <img src=${d.img}  alt="" class="pro-image-front">
+                        <img src=${d.img}  alt="" class="pro-image-back">
                         <div class="men-cart-pro">
                             <div class="inner-men-cart-pro">
                                 <a href="single.html" class="link-product-add-cart">Xem</a>
@@ -206,7 +206,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                     </div>
                     <div class="item-info-product ">
-                        <h4><a href="single.html">src=${d.img} </a></h4>
+                        <h4><a href="single.html">${d.name} </a></h4>
                         <div class="info-product-price">
                             <span class="item_price"><u class="d-v-t">đ</u>${d.priceSale}</span>
                             <del><u class="d-v-t">đ</u>${d.price}</del>
