@@ -254,6 +254,31 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
                             </div>
                         </div>
+                        <c:forEach items="${list}" var="d">
+                            <div class="col-md-3 product-men yes-marg">
+                                <div class="men-pro-item simpleCart_shelfItem">
+                                    <div class="men-thumb-item">
+                                        <img src=${d.img}  alt="" class="pro-image-front">
+                                        <img src=${d.img}  alt="" class="pro-image-back">
+                                        <div class="men-cart-pro">
+                                            <div class="inner-men-cart-pro">
+                                                <a href="single.html" class="link-product-add-cart">Xem</a>
+                                            </div>
+                                        </div>
+                                        <span class="product-new-top">Combo Pack</span>
+
+                                    </div>
+                                    <div class="item-info-product ">
+                                        <h4><a href="single.html">${d.name} </a></h4>
+                                        <div class="info-product-price">
+                                            <span class="item_price"><u class="d-v-t">đ</u>${d.priceSale}</span>
+                                            <del><u class="d-v-t">đ</u>${d.price}</del>
+                                        </div>
+                                        <a href="#" class="item_add single-item hvr-outline-out button2">Thêm vào giỏ</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </c:forEach>
                         <!--<div class="clearfix"></div>-->
                     </div>
                     <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
