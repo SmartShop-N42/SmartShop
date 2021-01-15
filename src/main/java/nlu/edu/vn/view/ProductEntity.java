@@ -16,7 +16,6 @@ public class ProductEntity {
         try {
             s = ConnectionDB.connect();
             ResultSet rs = s.executeQuery("select * from product");
-
             while (rs.next()){
                 re.add(new Product(rs.getString(1),
                         rs.getString(2),

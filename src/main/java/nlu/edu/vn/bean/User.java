@@ -4,9 +4,7 @@ import java.io.Serializable;
 
 public class User implements Serializable {
    private int id;
-   private  String name;
    private String uname;
-   private String email;
    private String pass;
    private int idgroup;
    private int active;
@@ -15,9 +13,7 @@ public class User implements Serializable {
     }
     public User(int id, String name, String uname, String email, String pass, int idgroup, int active) {
         this.id = id;
-        this.name=name;
         this.uname = uname;
-        this.email = email;
         this.pass = pass;
         this.idgroup = idgroup;
         this.active = active;
@@ -26,15 +22,11 @@ public class User implements Serializable {
     public int getId() {
         return id;
     }
-    public String getName() {return  name;}
 
     public String getUname() {
         return uname;
     }
 
-    public String getEmail() {
-        return email;
-    }
 
     public String getPass() {
         return pass;
@@ -53,17 +45,11 @@ public class User implements Serializable {
         this.id = id;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public void setUname(String uname) {
         this.uname = uname;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     public void setPass(String pass) {
         this.pass = pass;

@@ -1,5 +1,6 @@
 package nlu.edu.vn.controller;
 
+import nlu.edu.vn.Data;
 import nlu.edu.vn.bean.Product;
 import nlu.edu.vn.view.ProductEntity;
 
@@ -19,8 +20,9 @@ public class ListProduct extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ProductEntity pe = new ProductEntity();
+
         Collection<Product> data=pe.getAllProduct();
         request.setAttribute("list",data);
-        request.getRequestDispatcher("jsp/home/index.jsp").forward(request,response);
+        request.getRequestDispatcher("jsp/home/bags.jsp").forward(request,response);
     }
 }

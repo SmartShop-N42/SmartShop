@@ -3,10 +3,11 @@ package nlu.edu.vn.bean;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.util.Properties;
 
-public class Mail {
+public class Mail implements Serializable {
     public static void main(String[] args) {
     Properties props = new Properties();
 props.put("mail.smtp.host", "smtp.gmail.com");

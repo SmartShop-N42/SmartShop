@@ -32,9 +32,7 @@ public class Login extends HttpServlet {
                 rs.first();
                 User u = new User();
                 u.setId(rs.getInt(1));
-                u.setName(rs.getString(2));
                 u.setUname(rs.getString(3));
-                u.setEmail(rs.getString(4));
                 u.setPass("");
                 u.setIdgroup(rs.getInt(6));
                 u.setActive(rs.getInt(7));
@@ -43,12 +41,12 @@ public class Login extends HttpServlet {
                 response.sendRedirect("ListProduct");
             }else{
                 request.setAttribute("err", "Sai Username hoac mat khau");
-                request.getRequestDispatcher("jsp/login/login.jsp").forward(request,response);
+                request.getRequestDispatcher("/jsp/login/login.jsp").forward(request,response);
             }
         }catch (ClassNotFoundException| SQLException e){
             e.printStackTrace();
             request.setAttribute("err", "Sai Username hoac mat khau");
-            request.getRequestDispatcher("jsp/login/login.jsp").forward(request,response);
+            request.getRequestDispatcher("/jsp/login/login.jsp").forward(request,response);
         }
 
     }
